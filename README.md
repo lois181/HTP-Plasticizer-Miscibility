@@ -10,7 +10,6 @@ To manage the HTP, we use the workflow manager `signac` and `signac-flow` which 
     pip install Signac
     pip install Signac-flow
 
-then add how to git clone when you also know how to do that. 
 
 # Running Procedure 
 
