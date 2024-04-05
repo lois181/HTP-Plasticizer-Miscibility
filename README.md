@@ -38,7 +38,7 @@ The procedure is designed to be compatible with the 2016.4 MPI version of GROMAC
 
 To perform the simulations, first move into the initialised project root directory
 
-        cd my_project
+    cd my_project
 
 ## Signac-flow procedure for PL/PI simulations (C_C5) and miscibility analysis 
 
