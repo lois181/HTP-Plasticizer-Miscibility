@@ -45,7 +45,7 @@ def make_box_c5_c5(c5_num):
 def mdrun_min_c5_c5():
     ''' helper function to perform the long minimisation '''
     cmd = ("""sed -i 's/0.6204/1.1  /' ff-PI5.itp
-    sed -i 's/0.6204/1.1  /' ff-PI.itp
+    sed -i 's/0.6204/1.1  /' ff-PI5.itp
     gmx_mpi grompp -f minim.mdp -c out.gro -n index.ndx -p topol.top -o em.tpr
     gmx_mpi mdrun -s em.tpr -tableb table_a1.xvg
     sed -i 's/1.1 /1.0 /' ff-PI5.itp
