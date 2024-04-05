@@ -12,7 +12,7 @@ To manage the HTP, we use the workflow manager `signac` and `signac-flow` which 
 
 and to clone the repository:
 
-        git clone https://github.com/lois181/HTP-Plasticizer-Miscibility.git
+    git clone https://github.com/lois181/HTP-Plasticizer-Miscibility.git
 
 
 # Running Procedure 
