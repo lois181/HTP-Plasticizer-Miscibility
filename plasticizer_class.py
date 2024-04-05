@@ -6,13 +6,6 @@
 
 import sys
 import numpy as np
-# I have lots of important features in each simulation box defined halfway through the class
-# i.e. the number of PLs in the boxes, this should probably be defined in a function near the start 
-# of the class for better clarity
-# also I really don't think PL concentration and molecules in C5_C5 box need to be state variables at this point because there's only ever one of them
-# and actually if I have multiple the proceudre won't work 
-# it's getting out of hand now I need to add another thing for the length of the C5_C5 simulations but I've decided
-# that they should all be the same length so I'm hard coding it into the class
 
 class Plasticizer:
     def __init__(self, side_chain_length, backbone_length, side_chain_frequency, flexibility, sim_time, sim_type, PL_num, PL_conc):
