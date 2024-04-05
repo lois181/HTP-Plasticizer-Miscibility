@@ -10,6 +10,10 @@ To manage the HTP, we use the workflow manager `signac` and `signac-flow` which 
     pip install Signac
     pip install Signac-flow
 
+and to clone the repository:
+
+        git clone https://github.com/lois181/HTP-Plasticizer-Miscibility.git
+
 
 # Running Procedure 
 
