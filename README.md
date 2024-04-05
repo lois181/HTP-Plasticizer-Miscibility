@@ -30,7 +30,11 @@ which creates a `my_project` directory containing the `workspace` directory. Eac
 
 ## Preparing cluster submission
 
-The procedure is designed to be compatible with the 2016.4 MPI version of GROMACS (signle precision) with a SLURM scheduler. We have modified the default cluster submission template provided by `signac`, please refer to their documentation for changes that should be made to `my_project/environment.py` and `my_project/templates/submit.sh` to suit user requirements: (`https://docs.signac.io/en/latest/cluster_submission.html`). The number of cores provided to each `signac` operation can be modified using the `directives` argument in `project.py`. 
+The procedure is designed to be compatible with the 2016.4 MPI version of GROMACS (signle precision) with a SLURM scheduler. We have modified the default cluster submission template provided by `signac`, please refer to the `signac` documentation for guidance on how to submit on your own scheduler: (`https://docs.signac.io/en/latest/cluster_submission.html`). The number of cores provided to each `signac` operation can be modified using the `directives` argument in `project.py`. 
+
+To perform the simulations, first move into the initialised project root directory
+
+        cd my_project
 
 ## Signac-flow procedure for PL/PI simulations (C_C5) and miscibility analysis 
 
@@ -38,11 +42,11 @@ The flow project performs the PI/PL box creation, minimisation, NPT equilibratio
 
 To submit the operation:
 
-    python project.py submit -o c_sim
+    python project_c_c5.py submit -o c_sim
 
 To check its progress:
 
-    python project.py status 
+    python project_c_c5.py status 
 
 Upon success, the result is provided in binary format in `signac_job_document.json` of each relevant job directory (0- miscible, 1- immiscible).
 
@@ -50,7 +54,7 @@ Upon success, the result is provided in binary format in `signac_job_document.js
 
 To submit the operation:
 
-    python project.py submit -o c5_c5_sim 
+    python project_c5_c5.py submit -o c5_c5_sim 
 
 Upon success, the result for the average PL configurational entropy in 600 ns blocks is printed as a dictionary to `signac_job_document.json`. 
 
@@ -58,7 +62,7 @@ Upon success, the result for the average PL configurational entropy in 600 ns bl
 
 To submit the operation:
 
-    python project.py submit -o c5_sim
+    python project_c5.py submit -o c5_sim
 
 Upon success, the square radii of gyration, acylindricities and configurational entropies are printed as a dictionary to `signac_job_document.json`
 
